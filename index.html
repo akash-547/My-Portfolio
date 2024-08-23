@@ -5,26 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 </head>
 <body>
     <header id="header">
         <a href="#" class="logo">Portfolio</a>
         <nav class="navbar">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Skill</a>
-            <a href="#">Portfolio</a>
-            <a href="#">Contact</a>
+            <a href="#"  style="--i:1" class="active">Home</a>
+            <a href="#"  style="--i:2">About</a>
+            <a href="#"  style="--i:3">Skill</a>
+            <a href="#"  style="--i:4">Portfolio</a>
+            <a href="#"  style="--i:5">Contact</a>
         </nav>
     </header>
     <section id="Home">
         <div class="home-content">
             <h3>Hello,  It's  Me</h3>
             <h1>Akash Hussain</h1>
-            <h3>And I'm a</h3>
-            <p>I am a Front-End Developer with extensive experince for over 2 years .
+            <h3>And I'm a <span class="text"></span></h3>
+            <p>I'm a Front-End Developer with extensive experince for over 2 years.
                 <br>I create awesome websites and user interfaces that are both beautiful and easy to use.</p>
+                <div class="home-sci">
+                    <a href="#" style="--i:6"><i class='bx bxl-linkedin' ></i></a>
+                    <a href="#"  style="--i:7"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"  style="--i:8"><i class='bx bxl-upwork' ></i></a>
+                    <a href="#"  style="--i:9"><i class='bx bxl-whatsapp'></i></a>
+                </div>
+                <a href="#" class="btn-box">More About Me</a>
         </div>
     </section>
+
+    <!-- services section -->
+     <section class="about" id="about">
+        <div class="about-img">
+            <img src="images/20220516_174029-01.jpeg" alt="" width="200">
+        </div>
+        <div class="about-text" >
+        <h2>About <span>Me</span></h2>
+        <h4>Front-End Developer</h4>
+        <p>I am a passionate Front-End Web Developer with a strong background in creating dynamic and responsive websites. My expertise lies in HTML, CSS, JavaScript, and modern frameworks, which I leverage to build user-friendly interfaces and seamless user experiences. With a keen eye for design and attention to detail, I enjoy bringing creative concepts to life on the web. I am committed to writing clean, efficient code and continuously expanding my skills to stay at the forefront of the ever-evolving tech landscape.</p>
+        <a href="#" class="btn-box">More About Me</a>
+    </div>
+     </section>
+    <script src="main.js"></script>
 </body>
 </html>
