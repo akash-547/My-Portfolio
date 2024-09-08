@@ -246,6 +246,22 @@ body {
 .services-list div:hover{
   transform: translateY(-10px);
 }
+/* skills section */
+section{
+  display: flex;
+  flex-wrap: wrap;
+}
+.container1{
+  width: 600px;
+  height: 500px;
+  padding: 75px 90px;
+  margin-left: 120px;
+}
+.heading1{
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+}
 /* media query */
 @keyframes slideRight {
   0% {
