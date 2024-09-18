@@ -267,25 +267,25 @@ section{
 .bar{
   font-size: 23px;
 }
-.technical-bars .bar{
+.Technical-bars .bar{
   margin-top: 40px 0;
 }
-.technical-bars .bar:first-child{
+.Technical-bars .bar:first-child{
   margin-top: 0;
 }
-.technical-bars .bar:last-child{
+.Technical-bars .bar:last-child{
   margin-bottom: 0;
 }
-.technical-bars .bar .info{
+.Technical-bars .bar .info{
   margin-bottom: 5px;
 }
-.technical-bars .bar .info .span{
+.Technical-bars .bar .info span{
   font-size: 17px;
   font-weight: 500;
-  animation: showText 0.5s 1s linear;
+  animation: showText 0.5s 1s linear forwards;
   opacity: 0;
 }
-.technical-bars .bar .progress-line{
+.Technical-bars .bar .progress-line{
   position: relative;
   border-radius: 10px;
   width: 100%;
@@ -295,7 +295,7 @@ section{
   transform: scaleX(0);
   transform-origin:left ;
 }
-.technical-bars .bar .progress-line span{
+.Technical-bars .bar .progress-line span{
   height: 100%;
   background-color: #0ef;
   position:absolute;
@@ -304,7 +304,162 @@ section{
   transform: scaleX(0);
   transform-origin: left;
 }
+.progress-line.html span{
+  width: 90%;
+}
+.progress-line.css span{
+  width: 60%;
+}.progress-line .javaScript span{
+  width: 85%;
+}
+.progress-line.React span{
+  width: 75%;
+}
+.progress-line.nodejs span{
+  width: 50%;
+}
+.progress-line span::after{
+  position: absolute;
+  padding: 1px 8px;
+  background-color: #000;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 3px;
+  top: -28px;
+  right: -20;
+  animation: showText 0.5s 1.5s linear forwards;
+  opacity: 0;
+}
+.progress-line.html span::after{
+  content: 90%;
+}
+.progress-line.css span::after{
+  content: 60%;
+}
+.progress-line.javaScript span::after{
+  content: 85%;
+}
+.progress-line.React span::after{
+  content: 90%;
+}
+.progress-line.nodejs span::after{
+  content: 90%;
+}
+.progress-line span::before{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 7px solid transparent;
+  border-bottom-width:0px ;
+  border-right-width:0px ;
+  border-top-color: #000;
+  top: -10px;
+  right: 0;
+  animation: showText 0.5s 1.5s linear forwards;
+}
+.radial-bars{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+.radial-bars .radial-bar{
+  width: 50%;
+  height: 170px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.radial-bars .radial-bar svg{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) rotate(-90deg);
+  width: 120px;
+  height: 160px;
+}
+.radial-bars .radial-bar .progress-bar{
+  stroke-width: 10;
+  stop-color: black;
+  fill:transparent;
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
+  stroke-linecap: round;
+  animation: animate-bar 1s linear forwards;
+}
+.path{
+  stroke-width: 10;
+  stroke: #0ef;
+  fill: transparent;
+  stroke-dashoffset: 502;
+  stroke-dasharray: 502;
+  stroke-linecap: round;
+}
+.path-1{
+  animation: animate-path1 1s 1s linear forwards;
+}
+.path-2{
+  animation: animate-path2 1s 1s linear forwards;
+}
+.path-3{
+  animation: animate-path3 1s 1s linear forwards;
+}
+.path-4{
+  animation: animate-path4 1s 1s linear forwards;
+}
+.radial-bar  .percentage{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 17px;
+  font-weight: 500;
+  animation: showText 0.5s 1s linear forwards;
+  opacity: 0;
+}
+.radial-bar .text{
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  bottom: -5px;
+  transform: translateX(-50%);
+  font-size: 17px;
+  animation: showText 0.5s 1s linear forwards;
+  opacity: 0;
+}
 /* media query */
+@keyframes animate-path1{
+  100%{
+    stroke-dashoffset: 50;
+  }
+}
+@keyframes animate-path2{
+  100%{
+    stroke-dashoffset: 175;
+  }
+}
+@keyframes animate-path3{
+  100%{
+    stroke-dashoffset: 125;
+  }
+}
+@keyframes animate-path4{
+  100%{
+    stroke-dashoffset: 75;
+  }
+}
+@keyframes animate-bar{
+  100%{
+    stroke-dashoffset: -1;
+  }
+}
+@keyframes showText{
+  100%{
+    opacity: 1;
+  }
+}
 @keyframes animate{
   100%{
     transform: scaleX(1);
